@@ -74,6 +74,10 @@ type Update struct {
 	//
 	// optional
 	PreCheckoutQuery *PreCheckoutQuery `json:"pre_checkout_query"`
+	// PollAnswer new incoming poll_answer query. Contains full information about poll answer
+	//
+	// optional
+	PollAnswer *PollAnswer `json:"poll_answer"`
 }
 
 // UpdatesChannel is the channel for getting updates.
@@ -2329,6 +2333,13 @@ type PreCheckoutQuery struct {
 	//
 	// optional
 	OrderInfo *OrderInfo `json:"order_info,omitempty"`
+}
+
+// PollAnswer contains information about an poll answer.
+type PollAnswer struct {
+	// User who sent the poll
+	User      *User `json:"user"`
+	OptionIDs []int `json:"option_ids"`
 }
 
 // Error is an error containing extra information returned by the Telegram API.
