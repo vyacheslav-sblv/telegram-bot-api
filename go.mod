@@ -1,4 +1,4 @@
-module github.com/4Kaze/telegram-bot-api/v5
+module github.com/vyacheslav-sblv/telegram-bot-api/v5
 
 go 1.13
 
